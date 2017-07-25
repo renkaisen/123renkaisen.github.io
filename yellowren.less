@@ -1,0 +1,454 @@
+  body {
+    margin: 0;
+    padding: 0;
+    font: 12px "\5B8B\4F53", san-serif;
+    background: #fff;
+  }
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  form,
+  fieldset,
+  input,
+  textarea,
+  blockquote,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  table,
+  td,
+  tr,
+  th {
+    font-size: 12px;
+  }
+  li {
+    list-style-type: none;
+  }
+  img {
+    vertical-align: top;
+    border: 0;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  address,
+  cite,
+  code,
+  em,
+  th {
+    font-weight: normal;
+    font-style: normal;
+  }
+  .fB {
+    font-weight: bold;
+  }
+  .f12px {
+    font-size: 12px;
+  }
+  .f14px {
+    font-size: 14px;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+  a {
+    color: #2b2b2b;
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    color: #ba2636;
+    text-decoration: underline;
+  }
+  a:active {
+    color: #ba2636;
+  }
+
+//最外层的盒子
+  .yellowren{
+    margin: 100px auto;
+    // background-color: red;
+    width: 300/20rem;
+    height: 500/20rem;
+    border: 1/20rem solid #000;
+    // 最大的身体
+    .yellowrenbox{
+      position: relative;
+      // 身体内部
+      .renbody{
+          position: absolute; 
+          margin:10/20rem -40%;
+          width: 240/20rem;
+          height: 400/20rem;
+          left: 50%;
+          top: 50%;
+          border: 5/20rem solid #000;
+          border-radius: 110/20rem;
+          overflow: hidden;
+          z-index: 2;
+          background-color: #f9d946;
+          // 眼睛 三层
+          .eyes{
+            position: relative;
+            .eyes_left,.eyes_right{
+              width: 85/20rem;
+              height: 85/20rem;
+              border-radius: 50%;
+              border: 6/20rem solid #000;
+              background: #fff;
+              position: absolute;
+              top: 60/20rem;
+              left: 27/20rem;
+              .eyes_left_back,.eyes_right_back{
+                width: 40/20rem;
+                height: 40/20rem;
+                border-radius: 50%;
+                background-color: #000;
+                position: absolute;
+                top: 24/20rem;
+                left: 22/20rem;
+                animation:backeye 3s ease-in-out infinite;
+                .eyes_left_white,.eyes_right_white{
+                  width: 20/20rem;
+                  height: 20/20rem;
+                  border-radius: 50%;
+                  background-color: #fff;
+                  position: absolute;
+                  top: 7/20rem;
+                  left: 17/20rem;
+                  animation:whiteeye 3s ease-in-out infinite;
+                }
+              }
+            }
+            .eyes_right{
+              left: 125/20rem;
+            }
+            .eyes_left:after{
+              content: '';
+              width: 30/20rem;
+              height: 18/20rem;
+              background-color: #000;
+              position: absolute;
+              left: -34/20rem;
+              top: 37/20rem;
+              transform:skewX(20deg) rotate(7deg);
+            }
+            .eyes_right:after{
+              content: '';
+              width: 23/20rem;
+              height: 18/20rem;
+              background-color: #000;
+              position: absolute;
+              left: 89/20rem;
+              top: 37/20rem;
+              transform:skewX(-20deg) rotate(-7deg);
+            }
+          }
+          // 嘴巴
+          .mouse{
+            position: relative;
+            .mouse_among{
+              width: 55/20rem;
+              height: 35/20rem;
+              border: 5/20rem solid #000;
+              border-bottom-left-radius: 30/20rem;
+              background-color: #fff;
+              position: absolute;
+              top: 175/20rem;
+              left: 98/20rem;
+              z-index: 3;
+              transform:rotate(-35deg);
+              -webkit-animation:mouse 5s ease-in-out infinite;
+            }
+            //用个遮罩盖着
+            .mouse_among:after{
+              content: '';
+              width: 70/20rem;
+              height: 32/20rem;
+              border-bottom: 5/20rem solid #000;
+              border-radius: 35px 26px 5px 5px;
+              background:rgb(249,217,70);
+              // background: red;
+              position: absolute;
+              top: -16/20rem;
+              left: 3/20rem;
+              tranform:rotate(34deg);
+              -webkit-animation:mouse_mask 5s ease-in-out infinite;
+  
+            }
+          }
+          //裤子
+          .kuzi{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100/20rem;
+            border-top: 6/20rem solid #000;
+            background:rgb(32,116,160);
+            .kuzi_top{
+              position: absolute;
+              width: 160/20rem;
+              height: 60/20rem;
+              border: 6/20rem solid #000;
+              border-bottom: none;
+              border-radius: 0 0 5/20rem 5/20rem;
+              bottom: 99/20rem;
+              left: 34/20rem;
+              background: rgb(32,116,160);
+            }
+            .sling{
+              .sling_left,.sling_right{
+                position: absolute;
+                width: 100/20rem;
+                height: 16/20rem;
+                border: 5/20rem solid #000;
+                 background: rgb(32,116,160);
+                 top: -90/20rem;
+                 left: -35/20rem;
+                 z-index: 2;
+                 transform:rotate(45deg);
+              }
+              .sling_right{
+                  top: -88/20rem;
+                  left: 165/20rem;
+                  transform:rotate(-45deg);
+              }
+              .sling_right:after{
+                content: '';
+                width: 8/20rem;
+                height: 8/20rem;
+                border-radius: 50%;
+                top: 4/20rem;
+                left: 5/20rem;
+                position: absolute;
+                background:#000;
+              }
+              .sling_left:after{
+                content: '';
+                width: 8/20rem;
+                height: 8/20rem;
+                border-radius: 50%;
+                top: 4/20rem;
+                left: 88/20rem;
+                position: absolute;
+                background:#000;
+              }
+            }
+            .line_left,.line_right{
+               width: 30/20rem;
+               height: 30/20rem;
+               border-bottom-left-radius: 100/20rem;
+               border-bottom: 6/20rem solid #000;
+               border-left: 6/20rem solid #000;
+               position: absolute;
+               left: 0;
+               bottom: 63/20rem;
+               transform:rotate(-75deg);
+             }
+            .line_right{
+
+               left:205/20rem;
+               transform:rotate(-8deg);
+            }
+             .line_bottom{
+                height: 40/20rem;
+                border:3/20rem solid #000;
+                border-radius: 3/20rem;
+                position: absolute;
+                left: 118/20rem;
+                bottom: 0;
+             }
+          }
+
+      }
+      //双手
+      .renhands{
+        position: relative;
+        .renhands_left,.renhands_right{
+          width: 80/20rem;
+          height: 80/20rem;
+          border-radius: 25/20rem;
+          border: 6/20rem solid #000;
+          position: absolute;
+          top: 220/20rem;
+          left: 12/20rem;
+          transform:rotate(40deg);
+          z-index: 1;
+          // background:rgb(249,217,70);
+          background-color: #f9d946;
+        }
+        .renhands_right{
+          top: 220/20rem;
+          left: 205/20rem;
+          transform:rotate(-40deg); 
+        }
+      }
+      //双脚
+      .renfeets{
+        position: relative;
+        .renfeets_left,.renfeets_right{
+          width: 36/20rem;
+          height: 50/20rem;
+          border-bottom-left-radius: 9/20rem;
+          border-bottom-right-radius:6/20rem;
+          background-color: #000;
+          position: absolute;
+          top: 400/20rem;
+          left: 104/20rem;
+          transform-origin:right top;
+          animation:rightfoot .8s ease-in-out infinite;
+        }
+        .renfeets_right{
+          border-bottom-left-radius: 6/20rem;
+          border-bottom-right-radius:9/20rem;
+          left: 172/20rem;
+           transform-origin:right top;
+          animation:leftfoot .8s ease-in-out infinite;
+        }
+        .renfeets_left:after{
+          content: '';
+          width: 60/20rem;
+          height: 34/20rem;
+          border-radius: 20/20rem 10/20rem 21/20rem 15/20rem;
+          background: #000;
+          position: absolute;
+          left: -36/20rem;
+          top: 15/20rem;
+          transform:rotate(5deg);
+        }
+        .renfeets_right:after{
+          content: '';
+          width: 60/20rem;
+          height: 34/20rem;
+          border-radius: 10/20rem 20/20rem 15/20rem 21/20rem;
+          background: #000;
+          position: absolute;
+          left: 13/20rem;
+          top: 15/20rem;
+          transform:rotate(-5deg);
+        }
+      }
+      //双脚的影子
+      .feets_shadow{
+        width: 200/20rem;
+        height: 2/20rem;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.3);
+        box-shadow: 0 0 2/20rem 4/20rem rgba(0,0,0,0.3);
+        position: absolute;
+        left: 25/20rem;
+        top: 455/20rem;
+      }
+
+    }
+    .text{
+      position: absolute;
+      left: 360/20rem;
+      bottom: -100/20rem;
+    }
+
+
+  }
+  
+  //动画 脚下
+  @-webkit-keyframes rightfoot{
+    0%,50%,100%{
+      -webkit-transform:rotate(0deg);
+    }
+    80%{
+      -webkit-transform:rotate(10deg);
+    }
+  }
+
+   @-webkit-keyframes leftfoot{
+    0%,50%,100%{
+      -webkit-transform:rotate(0deg);
+    }
+    30%{
+      -webkit-transform:rotate(-10deg);
+    }
+  }
+
+
+  //动画眼睛
+  @-webkit-keyframes backeye{
+    0%,20%,50%,70%,100%{
+      -webkit-transform:translateX(0px);
+    }
+    30%,40%{
+      -webkit-transform:translateX(15px);
+    }
+    80%,90%{
+      -webkit-transform:translateX(-15px);
+    }
+  }
+
+  @-webkit-keyframes whiteeye{
+    0%,20%,50%,70%,100%{
+      -webkit-transform:translateX(0px);
+    }
+    30%,40%{
+      -webkit-transform:translate3d(3px,4px,0);
+    }
+    80%,90%{
+      -webkit-transform:translate3d(-15px,4px,0);
+    }
+  }
+
+
+  //嘴巴
+  @-webkit-keyframes mouse{
+    40%,43%{
+      width: 45/20rem;
+      height: 25/20rem;
+      top: 180/20rem;
+    }
+  0%,35%,48%,100%{
+      width: 55/20rem;
+      height: 35/20rem;
+      top: 175/20rem;
+      transform:rotate(-35deg);
+    }
+  }
+  @-webkit-keyframes mouse_mask{
+    40%,43%{
+        width: 60.5/20rem;
+        top:-19.3/20rem;
+        left:1.5/20rem;
+    }
+    0%,35%,48%,100%{
+        width: 70/20rem;
+        top:-16/20rem;
+        left:3/20rem;
+        -webkit-transform:rotate(33deg);
+    }
+  }
+
+  
